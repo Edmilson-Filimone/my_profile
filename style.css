@@ -1,195 +1,154 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
-
-
-/*RESET*/
 *{
-    padding: 0;
+    box-sizing: border-box;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding:0;
     margin: 0;
-    box-sizing:border-box;
-    font-family: Poppins, sans-serif;
 }
 
-/*Variaveis - cor*/
 :root{
-    --fundo:#EAE9E7;
-    --sidebar:#5DA4DA;
-    --titulo:#78716E;
-    --subtitulos:#B1CFDE;
+    --principal: #EFEFEF;
+    --aside: #E1B2A7;
+    --footer: #AFBFBF;
 }
 
-/*|| Classes comuns*/
-
-.inline-block{
-    display: inline-block;
-}
-.flex-row{display: flex;
-flex-direction: row;}
-
-.grid-row{
-    display: grid;
-    grid-template-columns:1fr;
-    gap:1%;
-}
-
-.main{
-    background-color:var(--fundo);
-    padding:11%;
-    
+body{
+    padding: 5%;
 }
 
 
-ul{
-    list-style: none;
+.container{
+    background-color: var(--principal);
 }
 
-/*BASICO*/
 
-/*SIDEBAR*/
-.sidebar{
-    width:40%;
-    min-height: 1000px;
-    background-color:var(--sidebar);
-    color: white;
-    padding-bottom: 5%;
-    box-shadow: 0px 2px 0px var(--sidebar);
+/*HEADER*/
+header{
+    display: flex;
+    height: 210px;
 }
 
-/*imagem de perfil*/
-.imagem_container{
-    width: 100%;
-    height:20%;
-    text-align: center;
-    color: white;
-    text-shadow: 1.5px 1.5px 10px rgb(0, 0, 0);
-    font-weight:900;
-    
+
+header .image{
+    background-color: var(--footer);
+    min-height: 100%;
+    width: 45%;
+    margin: 0% 2% 0% 5%;
 }
 
-.name{
+header .image img{
+    max-width: 100%;
+    border-radius: 50%;
     position: relative;
-    bottom:-78%;
+    margin-top: 120px;
 }
 
+header .text_container{
+    padding: 5% 5% 10% 0%;
+}
 
+header .text_container h1, header .text_container h4 {
+    padding-bottom: 1%;
+}
 
-.sidebar div.imagem_container{
-    background-image: url("https://www.freeshop.com.br/blog/wp-content/uploads/2019/08/302273-revisao-reservada-lu-silva-prazo-28-20-h-o-que-e-a-imagem-profissional-aprenda-como-trabalhar-a-sua.jpg");
-    background-size:100% 100%;
-    background-repeat: no-repeat;
+header .text_container p{
+    padding:1% 0% 1% 0% ;
+    line-height: 1.5em;
+}
+
+/*MAIN*/
+
+main{
+    display: flex;
+    margin-bottom:5%;
    
 }
 
-/*info*/
-.info_container{
-    padding: 5% 0% 5% 5%;
-    margin-right:0;
-    font-size: small;
+
+/*main.aside*/
+aside{
+    background-color: var(--aside);
+    min-height: 600px;
+    width: 30%;
+    padding: 10% 5% 5% 3%;
 }
 
-.info{
-    padding: 5% 0% 5% 5%;
-
-    
+aside h3{
+    font-weight: 900;
+    margin-bottom: 20%;
 }
 
-.space{
+
+aside h3::after{
+    content:"";
+    position: absolute;
+    height: 20px;
+    width:50px;
+    padding-top:1%;
+    border-bottom: 3px solid black;
+    left: 80px;
+}
+
+
+aside ul{
+    list-style: none;
+} 
+
+aside ul li{
+    margin-bottom: 10%;
+    font-weight: 100;
+    font-size:15px;
+}
+
+aside ul li span{
+    display:block;
+}
+
+aside ul li h4{
+    padding-bottom:4%;
+}
+
+/*main.section.pricipal*/
+
+.principal{
+    width: 70%;
+    padding:4% 4% 0% 2.5%;
+}
+
+.principal h4, .principal p{
+    margin-bottom: 5%;
+}
+
+.principal h4:nth-child(1){
+   text-transform: uppercase;
+}
+
+.principal h4:nth-child(1):after{
+    content:"";
+    position: absolute;
+    height: 20px;
+    width:68px;
+    padding-top:1%;
+    border-bottom: 3px solid var(--aside);
+    left:355px;}
+
+.principal h4:nth-child(2){
+    font-weight: 300;
+ }
+
+ .principal p{
+    font-weight: 300;
+    line-height: 1.4em;
+}
+
+.principal .assignature{
+    float: right;
+}
+
+footer{
+    background-color: var(--footer);
+    position: relative;
     width: 100%;
-    margin-right:0%;
-    margin-left:5%;
-    padding: 0% 3% 5% 0%;
-    padding-bottom:10%;
-    text-align: left;
-    border-bottom: .5px solid rgba(53, 53, 53, 0.425);
-
-}
-
-/* Skills*/
-
-div.bar{
-     width:70%;
-     height: 3px;
-     background-color: rgba(53, 53, 53, 0.425);
-     margin-bottom: 10%;
-     
- }
-
- div.bar div.percentagem{
-     width: 60%;
-     height: 3px;
-     background-color: rgb(255, 255, 255);
- }
-
- div.bar div.percentagem_2{
-    width: 60%;
-    height: 3px;
-    background-color: rgb(255, 255, 255);
-}
-
-div.bar div.percentagem_3{
-    width: 90%;
-    height: 3px;
-    background-color: rgb(255, 255, 255);
-}
-
-
-
-
-/*Main*/
-.sub_main{
-    min-height: 1000px;
-    padding-left:1%;
-    padding-right:1%;
-   
-    
-}
-/*blocos - propiedades gerais*/
-.bloco{
-    border: 1px solid rgba(0, 0, 0, 0.13);
-    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.322);
-    background-color:white;
-    padding:7% 0% 5% 5%;
-    
-}
-
-/*Icon*/
-.bloco span i{
-    font-size:2em;
-    color: var(--titulo);
-}
-
-/*Conteudo*/
-.descricao{
-    margin-left: 5%;
-}
-
-.descricao h2, .descricao h4 {
-    padding-bottom: 2%;
-    color: var(--titulo);
-}
-
-.descricao h5{
-    color: var(--sidebar);
-    text-transform: uppercase;
-}
-
-.descricao ul li{
-    padding:5% 5% 5% 0%;
-    border-bottom: .5px solid rgba(53, 53, 53, 0.425);
-}
-
-
-/*Interesses*/
-
-.descricao li.flex-row{
-    border-width:0px;
-    margin-right:15% ;
-}
-
-li.flex-row p{padding-left: 15%; padding-right:15%;} 
-
-
-.descricao li.flex-row span i{
-    font-size: 1.3em;
-    color: var(--sidebar);
+    height: 20px;
+    bottom: 0px;
 }
