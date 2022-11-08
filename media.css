@@ -38,6 +38,10 @@
         justify-content: center;
     }
 
+    .area .posicao_info, .area .ano_empresa{
+        width: 100%;
+    }
+
 }
 
 /*|| tablet 810px*/
