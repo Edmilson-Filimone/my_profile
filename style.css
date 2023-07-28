@@ -56,8 +56,8 @@ main{
 .link{
     font-size: 14px;
     font-weight: 800;
-    text-decoration: none;
-    color: #333134;
+    text-decoration: underline;
+    color: #178cc2;
 }
 
 
