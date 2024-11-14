@@ -64,6 +64,7 @@ main{
 
 /*|| COMMON STYLE*/
 .bottom-line{
+    margin-top: 40px;
     padding-bottom: 1%;
     border-bottom: 1px solid rgba(0, 0, 0, 0.404);
 }
@@ -317,13 +318,13 @@ h3, h4{
 
 .inner-block ul{
     list-style-type: square;
-    list-style-position: inside;
+    list-style-position:inside;
     padding-top: 1.3%;
-    padding-left:5%;
+    padding-left:0%;
 }
 
 .inner-block ul li{
-text-align: justify;
+text-align:left;
 line-height:28px}
 
 /*Paragraphs*/
@@ -335,4 +336,13 @@ text-align: justify;
 
 .name-item{
     font-weight: 900;
+}
+
+.ajuste{
+    margin-bottom: 80px;
+    height: 50px;
+}
+
+.tools{
+    font-weight: 500;
 }
